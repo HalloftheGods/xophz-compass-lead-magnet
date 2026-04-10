@@ -25,7 +25,7 @@ Pull leads in with this super-powered magnetic form builder.
 1. Ensure **Xophz COMPASS** is installed and active.
 2. Upload `xophz-compass-lead-magnet` to `/wp-content/plugins/`.
 3. Activate through the Plugins menu.
-4. Access via the COMPASS dashboard → **Lead Magnet**.
+4. Access via the My Compass dashboard → **Lead Magnet**.
 
 ## Frontend Routes
 
