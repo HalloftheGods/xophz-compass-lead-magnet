@@ -1,0 +1,21 @@
+{
+  "name": "hallofthegods/xophz-compass-lead-magnet",
+  "description": "Pull leads in with this super-powered magnetic form builder.",
+  "version": "26.4.11",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Hall of the Gods, Inc.",
+      "homepage": "https://www.hallofthegods.com"
+    }
+  ],
+  "require": {
+    "composer/installers": "^1.0 || ^2.0"
+  },
+  "autoload": {
+    "files": [
+      "xophz-compass-lead-magnet.php"
+    ]
+  }
+}
