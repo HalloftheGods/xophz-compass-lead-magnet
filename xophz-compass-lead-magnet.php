@@ -14,6 +14,7 @@
  *
  * @wordpress-plugin
  * Category:          Trajectory
+ * Group:             MA
  * Plugin Name:       Xophz Lead Magnet 
  * Plugin URI:        https://github.com/HalloftheGods/xophz-compass-lead-magnet
  * Description:       Pull leads in with this super-powered magnetic form builder. 
