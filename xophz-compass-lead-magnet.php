@@ -54,8 +54,7 @@ function activate_xophz_compass_lead_magnet() {
  * This action is documented in includes/class-xophz-compass-lead-magnet-deactivator.php
  */
 function deactivate_xophz_compass_lead_magnet() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-xophz-compass-lead-magnet-deactivator.php';
-	Xophz_Compass_Lead_Magnet_Deactivator::deactivate();
+	Xophz_Compass_Lead_Magnet::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_xophz_compass_lead_magnet' );
