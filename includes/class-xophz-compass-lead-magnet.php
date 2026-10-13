@@ -89,6 +89,7 @@ class Xophz_Compass_Lead_Magnet extends Xophz_Compass_Plugin_Base {
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 		$this->define_capture_hooks();
+		$this->define_pattern_hooks();
 
 	}
 
@@ -143,6 +144,11 @@ class Xophz_Compass_Lead_Magnet extends Xophz_Compass_Plugin_Base {
 		require_once $dir . 'includes/class-xophz-compass-lead-magnet-capture.php';
 		require_once $dir . 'admin/class-lead-magnet-settings.php';
 		require_once $dir . 'admin/class-lead-magnet-leads-admin.php';
+
+		/**
+		 * The annuity educator landing page block pattern.
+		 */
+		require_once $dir . 'includes/class-lead-magnet-educator-pattern.php';
 	}
 
 	/**
@@ -200,6 +206,15 @@ class Xophz_Compass_Lead_Magnet extends Xophz_Compass_Plugin_Base {
 	 */
 	private function define_capture_hooks() {
 		( new Xophz_Compass_Lead_Magnet_Capture() )->init();
+	}
+
+	/**
+	 * Register the "Lead Magnet" block pattern category and the annuity educator landing page pattern.
+	 *
+	 * @access   private
+	 */
+	private function define_pattern_hooks() {
+		( new Lead_Magnet_Educator_Pattern() )->init();
 	}
 
 	/**

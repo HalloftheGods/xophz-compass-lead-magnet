@@ -33,6 +33,10 @@ Put `[lead_magnet_capture offer="annuity-checklist"]` on a landing page. Before 
 
 The consent wording is a draft. Have a lawyer approve it before the form goes live.
 
+## Annuity educator page
+
+In the block editor, open the inserter, choose **Patterns > Lead Magnet** and insert **Annuity educator landing page**. It holds a hero, three YouTube video slots (paste a URL into each embed), three "Questions people ask" items, the capture form and a compliance footer. Every bracketed line is an instruction: replace each one with your own text, and have a compliance reviewer approve the answers and the footer before the page goes live. An unset video slot is left off the public page. Details: [docs/CHANGELOG.md](docs/CHANGELOG.md).
+
 ## Frontend Routes
 
 | Route | View | Description |
