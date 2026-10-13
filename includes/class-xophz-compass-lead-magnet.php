@@ -88,6 +88,7 @@ class Xophz_Compass_Lead_Magnet extends Xophz_Compass_Plugin_Base {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
+		$this->define_capture_hooks();
 
 	}
 
@@ -130,7 +131,18 @@ class Xophz_Compass_Lead_Magnet extends Xophz_Compass_Plugin_Base {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-xophz-compass-lead-magnet-public.php';
 
-
+		/**
+		 * The annuity capture flow: Lead post type, [lead_magnet_capture] shortcode, REST route,
+		 * settings and lead admin.
+		 */
+		$dir = plugin_dir_path( dirname( __FILE__ ) );
+		require_once $dir . 'includes/class-lead-magnet-consent.php';
+		require_once $dir . 'includes/class-lead-magnet-rate-limit.php';
+		require_once $dir . 'includes/class-lead-magnet-leads.php';
+		require_once $dir . 'includes/class-lead-magnet-form.php';
+		require_once $dir . 'includes/class-xophz-compass-lead-magnet-capture.php';
+		require_once $dir . 'admin/class-lead-magnet-settings.php';
+		require_once $dir . 'admin/class-lead-magnet-leads-admin.php';
 	}
 
 	/**
@@ -179,6 +191,15 @@ class Xophz_Compass_Lead_Magnet extends Xophz_Compass_Plugin_Base {
 
 		$this->loader->add_action( 'init', $plugin_public, 'capture_corp_id' );
 		$this->loader->add_action( 'init', $plugin_public, 'register_corp_id_shortcode' );
+	}
+
+	/**
+	 * Register the capture flow. It fires xophz_lead_magnet_lead_captured for every stored lead.
+	 *
+	 * @access   private
+	 */
+	private function define_capture_hooks() {
+		( new Xophz_Compass_Lead_Magnet_Capture() )->init();
 	}
 
 	/**

@@ -27,6 +27,12 @@ Pull leads in with this super-powered magnetic form builder.
 3. Activate through the Plugins menu.
 4. Access via the My Compass dashboard → **Lead Magnet**.
 
+## Capture form
+
+Put `[lead_magnet_capture offer="annuity-checklist"]` on a landing page. Before it renders, set the seller name and privacy policy URL under **Settings > Lead Magnet**. Submissions go to `POST /wp-json/lead-magnet/v1/capture` and are stored as private Leads (under the COMPASS menu, admins only) with their consent record and landing-URL attribution. Each stored lead fires `xophz_lead_magnet_lead_captured`. Details: [docs/CHANGELOG.md](docs/CHANGELOG.md).
+
+The consent wording is a draft. Have a lawyer approve it before the form goes live.
+
 ## Frontend Routes
 
 | Route | View | Description |
